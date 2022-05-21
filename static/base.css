@@ -1,0 +1,12 @@
+.rounded-lg{
+    border-radius: 15%;
+}
+.bg{
+    background-color: #28282b;
+}
+#row1{
+    position: relative;
+}
+#img{
+    float: left;
+}
