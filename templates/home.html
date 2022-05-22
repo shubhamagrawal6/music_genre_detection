@@ -10,16 +10,36 @@
     }
     #list{
         height: 500px;
+        background-image: url("https://cdn.discordapp.com/attachments/977125743790272513/977890273969471495/4688-717x403.jpg");
+        background-position: unset;
+        background-repeat: round;
+        background-clip: border-box;
     }
     #audio{
+        background-color: whitesmoke;
+        border-top-left-radius: 7.5%;
+        border-bottom-left-radius: 7.5%;
         height: 500px;
         border-right: 4px dashed black
+    }
+    #model{
+        height: 500px;
+        border-radius: 5%;
+        background-clip: border-box;
     }
     #listbox{
         overflow: auto;
         height: 450px;
         margin-top: 25px;
         margin-bottom: 25px;
+    }
+    #upload{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        width: 100%;
     }
 </style>
 <div class="container mt-5">
@@ -28,36 +48,120 @@
             <div class="row">
                 <div class="col-6" id="audio">
                     <div id="listbox">
-                        <ul>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                            <li>test</li>
-                        </ul>
+                        <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons">  
+                            <label class="btn btn-secondary">  
+                              <input type="radio" name="options" id="professor1"> Audio File  
+                            </label>  
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optio1ns" id="professor2"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optifrgbons" id="professowr"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optvtbdfbdions" id="profeffvssor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optityumnrcons" id="professvfvor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="opthyjfmnfvxions" id="profesrvdsor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optbtrynfgbfvions" id="proferdggssor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="opttrhgsvcions" id="profegrdgssor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optgtrhtbfvsions" id="profegrdgrgssor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optthsvcdions" id="professrtrtvor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="opttdhfvdsions" id="profesggeeesor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="opgtdgrfdvstions" id="profesrgtbgdvsor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optgtdgrvsions" id="progegdtbtfessor"> Audio File  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="optgtgdrfdcions" id="profgrtgegessor"> Audio File  
+                            </label>
+                          </div>  
                     </div>
                 </div>
-                <div class="col-6">Button</div>
+                <div id="upload" class="col-6">
+                    <div>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-4">
-            Model List
+        <div class="col-1"></div>
+        <div class="col-3 bg-l" id="model">
+            <div class="row">
+                <div class="col">
+                    <div id="listbox">
+                        <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons">
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                            <label class="btn btn-secondary">  
+                                <input type="radio" name="options" id="professor" checked> Model  
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-8">
+            <div class="row">
+                <div class="col-6">
+                    <input class="btn btn-secondary" type="reset" value="Reset">
+                </div>
+                <div class="col-6">
+                    <input class="btn btn-secondary" type="submit" value="Submit">
+                </div>
+            </div>
         </div>
     </div>
 </div>
