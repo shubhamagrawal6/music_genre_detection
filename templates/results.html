@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row" id="row1">
+        <div class="col-5 rounded-md">
+            <div class="row rows bg-l rounded-md centre-style">
+                <div>
+                    <img src="https://cdn.discordapp.com/attachments/977125743790272513/978221833306402826/output.png" alt="Waveplot" height="220px" width="450px">
+                </div>
+            </div>
+            <div class="row rows bg-l rounded-md centre-style mt-3">
+                <div>
+                    <img src="https://cdn.discordapp.com/attachments/977125743790272513/978221833574842378/shubhspectrogram.png" alt="Spectogram" height="220px" width="450px">
+                </div>
+            </div>
+        </div>
+        <div class="col-3 rounded-md bg-l mx-auto">
+            <div class="row" id="result">
+                <div class="ml-3 mr-3">
+                    <b>Result:</b><br>
+                    The Genre prediction made by Cat Boost Classifier is 'Blues'
+                </div>
+            </div>
+            <div class="row" id="acc">
+                <div class="ml-3 mr-3">
+                    <b>Accuracy:</b><br>
+                    The Accuracy of this selected model is 89.5%
+                </div>
+            </div>
+        </div>
+        <div class="col-3 bg-d" id="model">
+            <div class="row">
+                <div class="col">
+                    <div id="listbox" class="ml-2 mr-2">
+                        <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons" id="but">
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Naive Bayes" checked> Naive Bayes' 
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Decision trees" checked> Decision trees
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Stochastic Gradient Descent" checked> Stochastic Gradient Descent
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Logistic Regression" checked> Logistic Regression
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Neural Nets" checked> Neural Nets
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Support Vector Machine" checked> Support Vector Machine
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="K-Nearest Neighbours" checked> K-Nearest Neighbours
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Random Forest" checked> Random Forest
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Cat Boost Classifier" checked> Cat Boost Classifier
+                            </label>
+                            <label class="btn btn-secondary but">  
+                                <input type="radio" name="options" id="Cross Gradient Booster" checked> Cross Gradient Booster
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

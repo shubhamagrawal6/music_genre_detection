@@ -25,7 +25,7 @@
     background-clip: border-box;
 }
 #audio{
-    background-color: whitesmoke;
+    background-color: #38383a;
     border-top-left-radius: 7.5%;
     border-bottom-left-radius: 7.5%;
     height: 500px;
@@ -49,4 +49,38 @@
 }
 .btn{
     width: 100%;
+}
+.but{
+    font-size: 16px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.bg-d{
+    background-color: #38383a;
+}
+#row1{
+    height: 500px;
+}
+.centre-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rows{
+    height: 240px;
+}
+.img{
+    object-fit: fill;
+}
+#result{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    border-bottom: 4px dashed black
+}
+#acc{
+    display: flex;
+    align-items: center;
+    height: 250px;
 }
