@@ -12,7 +12,7 @@ def upload(request):
         if form.is_valid:
             form.save()
 
-        return redirect('app-results')
+        return redirect('results')
 
     else:
         form = MaterialsForm()

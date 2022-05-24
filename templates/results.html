@@ -18,13 +18,13 @@
             <div class="row" id="result">
                 <div class="ml-3 mr-3">
                     <b>Result:</b><br>
-                    The Genre prediction made by Cat Boost Classifier is '{{ genre }}'
+                    The Genre prediction made by {{ model }} is <b>'{{ genre }}'</b>
                 </div>
             </div>
             <div class="row" id="acc">
                 <div class="ml-3 mr-3">
                     <b>Accuracy:</b><br>
-                    The Accuracy of this selected model is <b id="temp">89.3</b>%
+                    The Accuracy of this selected model is {{ accuracy }}%
                 </div>
             </div>
         </div>
