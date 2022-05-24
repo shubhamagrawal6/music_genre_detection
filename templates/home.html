@@ -1,16 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
+<style>
+    #list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .link{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .l{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 130px;
+    }
+</style>
 <div class="container mt-5">
     <div class="row">
         <div id="list" class="col-8 bg-l rounded-md">
             <div class="row">
-                <div id="listbox" class="col">
-                    <div id="upload">
-                        <button type="submit" class="btn btn-secondary">
-                            <a href="{% url 'app-results'%}" style="color: white;">Submit</a>
-                        </button>
+                <div id="upload" class="col l">
+                    <div>
+                        <a class="btn btn-secondary link" href="{% url 'app-results'%}" style="font-size: 30px;">Submit</a>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -23,34 +37,34 @@
                     <div id="listbox" class="ml-2 mr-2">
                         <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons" id="but">
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Naive Bayes" checked> Naive Bayes' 
+                                <input type="radio" name="options" id="Naive Bayes"> Naive Bayes' 
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Decision trees" checked> Decision trees
+                                <input type="radio" name="options" id="Decision trees"> Decision trees
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Stochastic Gradient Descent" checked> Stochastic Gradient Descent
+                                <input type="radio" name="options" id="Stochastic Gradient Descent"> Stochastic Gradient Descent
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Logistic Regression" checked> Logistic Regression
+                                <input type="radio" name="options" id="Logistic Regression"> Logistic Regression
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Neural Nets" checked> Neural Nets
+                                <input type="radio" name="options" id="Neural Nets"> Neural Nets
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Support Vector Machine" checked> Support Vector Machine
+                                <input type="radio" name="options" id="Support Vector Machine"> Support Vector Machine
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="K-Nearest Neighbours" checked> K-Nearest Neighbours
+                                <input type="radio" name="options" id="K-Nearest Neighbours"> K-Nearest Neighbours
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Random Forest" checked> Random Forest
+                                <input type="radio" name="options" id="Random Forest"> Random Forest
+                            </label>
+                            <label class="btn btn-secondary but active">  
+                                <input type="radio" name="options" id="Cat Boost Classifier"> Cat Boost Classifier
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Cat Boost Classifier" checked> Cat Boost Classifier
-                            </label>
-                            <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Cross Gradient Booster" checked> Cross Gradient Booster
+                                <input type="radio" name="options" id="Cross Gradient Booster"> Cross Gradient Booster
                             </label>
                         </div>
                     </div>
@@ -58,22 +72,5 @@
             </div>
         </div>
     </div>
-
-    <div class="row mt-5">
-        <div class="col-8">
-            <div class="row">
-                <div class="col-6">
-                    <input class="btn btn-secondary" type="reset" value="Reset">
-                </div>
-
-                <div class="col-6">
-                    <button type="submit" class="btn btn-secondary">
-                        <a href="{% url 'app-results'%}" style="color: white;">Submit</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 {% endblock content %}
