@@ -12,14 +12,16 @@ def upload(request):
         if form.is_valid:
             form.save()
             
-            return redirect('prediction')
+        return render(request, 'results.html')
     else:
         form = MaterialsForm()
 
-    return render(request, 'templates/upload.html', {'form': form})
+    return render(request, 'upload.html', {'form': form})
 
 def prediction(request):
     a = materials.objects.all()
+    
+    return render(request, 'results.html')
     
     
     
