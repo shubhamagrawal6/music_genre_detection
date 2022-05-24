@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from . import views
 
 urlpatterns = [
@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/',views.about, name="app-about"),
     path('results/',views.results, name="app-results"),
+    path('upload/', include('files.urls')),
 ]
 
 if settings.DEBUG:

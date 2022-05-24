@@ -11,20 +11,15 @@ def upload(request):
         form = MaterialsForm(request.POST, request.FILES)
         if form.is_valid:
             form.save()
-            return redirect('fileslist')
+            
+            return redirect('prediction')
     else:
         form = MaterialsForm()
 
-    return render(request, 'templates/upload.html', {'form':form})
+    return render(request, 'templates/upload.html', {'form': form})
 
-def fileslist(request):
+def prediction(request):
     a = materials.objects.all()
-    Materials = []
-    for mat in a:
-        if os.path.exists(mat.files.path):
-            Materials.append(mat)
-        else:
-            mat.delete()
-    return render(request, 'files/fileslist.html', {
-        'materials' : Materials
-    })
+    
+    
+    
