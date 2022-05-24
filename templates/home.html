@@ -4,79 +4,14 @@
     <div class="row">
         <div id="list" class="col-8 bg-l rounded-md">
             <div class="row">
-                <div class="col-6" id="audio">
-                    <div id="listbox">
-                        <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons">  
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="blues1"> The Thrill is Gone
-                            </label>  
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="blues2"> Hoochie Coochie Man
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="disco1"> Knock On Wood
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="disco2"> Disco Inferno
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="metal1"> Angel Of Death
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="metal2"> Master Of Puppets
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="reggae1"> Many Rivers To Cross
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="reggae2"> Three Little Birds
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="rock1"> Back In Black
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="rock2"> Kashmir
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="classical1"> Stars And Stripes Forever
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="classical2"> Fanfare For The Common Man
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="jazz1"> Strange Fruit
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="jazz2"> Fever
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="hiphop1"> Passing Me By
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="hiphop2"> Fight The Power
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="country1"> I Walk The Line
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="country2"> Country Roads Take Me Home
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="pop1"> Bad Romance
-                            </label>
-                            <label class="btn btn-secondary">  
-                                <input type="radio" name="options" id="pop2"> Crazy In Love
-                            </label>
-                          </div>  
+                <div id="listbox" class="col">
+                    <div id="upload">
+                        <button type="submit" class="btn btn-secondary">
+                            <a href="{% url 'app-results'%}" style="color: white;">Submit</a>
+                        </button>
                     </div>
+                    
                 </div>
-
-                <div id="upload" class="col-6">
-                    <div>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -132,11 +67,13 @@
                 </div>
 
                 <div class="col-6">
-                    <a class="btn btn-secondary" href="{% url 'app-results'%}">Submit</a>
+                    <button type="submit" class="btn btn-secondary">
+                        <a href="{% url 'app-results'%}" style="color: white;">Submit</a>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
 {% endblock content %}
