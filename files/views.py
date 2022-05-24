@@ -11,17 +11,13 @@ def upload(request):
         form = MaterialsForm(request.POST, request.FILES)
         if form.is_valid:
             form.save()
-            
-        return render(request, 'results.html')
+
+        return redirect('app-results')
+
     else:
         form = MaterialsForm()
 
     return render(request, 'upload.html', {'form': form})
 
-def prediction(request):
-    a = materials.objects.all()
-    
-    return render(request, 'results.html')
-    
     
     

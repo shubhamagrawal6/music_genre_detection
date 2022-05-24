@@ -18,13 +18,13 @@
             <div class="row" id="result">
                 <div class="ml-3 mr-3">
                     <b>Result:</b><br>
-                    The Genre prediction made by Cat Boost Classifier is 'Blues'
+                    The Genre prediction made by Cat Boost Classifier is '{{ genre }}'
                 </div>
             </div>
             <div class="row" id="acc">
                 <div class="ml-3 mr-3">
                     <b>Accuracy:</b><br>
-                    The Accuracy of this selected model is 89.5%
+                    The Accuracy of this selected model is <b id="temp">89.3</b>%
                 </div>
             </div>
         </div>
@@ -33,36 +33,38 @@
                 <div class="col">
                     <div id="listbox" class="ml-2 mr-2">
                         <div class="btn-group-vertical btn-group-toggle btn-block" data-toggle="buttons" id="but">
+                            <form name="myForm">
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Naive Bayes" checked> Naive Bayes' 
+                                <input type="radio" name="options" id="Naive Bayes" value="1"> Naive Bayes' 
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Decision trees" checked> Decision trees
+                                <input type="radio" name="options" id="Decision trees" value="2"> Decision trees
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Stochastic Gradient Descent" checked> Stochastic Gradient Descent
+                                <input type="radio" name="options" id="Stochastic Gradient Descent" value="3"> Stochastic Gradient Descent
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Logistic Regression" checked> Logistic Regression
+                                <input type="radio" name="options" id="Logistic Regression" value="4"> Logistic Regression
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Neural Nets" checked> Neural Nets
+                                <input type="radio" name="options" id="Neural Nets" value="5"> Neural Nets
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Support Vector Machine" checked> Support Vector Machine
+                                <input type="radio" name="options" id="Support Vector Machine" value="6"> Support Vector Machine
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="K-Nearest Neighbours" checked> K-Nearest Neighbours
+                                <input type="radio" name="options" id="K-Nearest Neighbours" value="7"> K-Nearest Neighbours
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Random Forest" checked> Random Forest
+                                <input type="radio" name="options" id="Random Forest" value="8"> Random Forest
+                            </label>
+                            <label class="btn btn-secondary but active">  
+                                <input type="radio" name="options" id="Cat Boost Classifier" value="9"> Cat Boost Classifier
                             </label>
                             <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Cat Boost Classifier" checked> Cat Boost Classifier
+                                <input type="radio" name="options" id="Cross Gradient Booster" value="10"> Cross Gradient Booster
                             </label>
-                            <label class="btn btn-secondary but">  
-                                <input type="radio" name="options" id="Cross Gradient Booster" checked> Cross Gradient Booster
-                            </label>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -70,4 +72,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    var rad = document.myForm.options;
+    var score = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    var prev = null;
+    
+    for (var i = 0; i < rad.length; i++) {
+        rad[i].addEventListener('change', function() {
+            (prev) ? console.log(prev.value): null;
+            if (this !== prev) {
+                prev = this;
+                document.getElementById("temp").innerHTML = score[i].toString()
+            }
+            console.log(this.value)
+        });
+    }
+</script>
 {% endblock content %}
