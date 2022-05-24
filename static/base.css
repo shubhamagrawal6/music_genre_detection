@@ -84,3 +84,18 @@
     align-items: center;
     height: 250px;
 }
+#list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+}
