@@ -3,12 +3,11 @@ import pickle
 from django.shortcuts import render
 import librosa
 import numpy as np
-from sklearn import feature_extraction
 
 # Create your views here.
 
 def find_audio():
-    path = "C:/Users/agraw/Desktop/Projects/music_genre_detection/media/"
+    path = "C:/Users/Shubh/Desktop/Projects/music_genre_detection/media/"
 
     mx = ""
 
@@ -75,7 +74,7 @@ def extract_features(path):
     addToList(arr, "tempo", tempo)
 
     # Loading the scaler saved during model training
-    with open('C:/Users/agraw/Desktop/Projects/music_genre_detection/homepage/minmax.pickle', 'rb') as handle:
+    with open('C:/Users/Shubh/Desktop/Projects/music_genre_detection/homepage/minmax.pickle', 'rb') as handle:
         minmax = pickle.load(handle)
 
     # Normalizing the features using the scaler
@@ -88,7 +87,7 @@ def predict(arr):
     # Labels for prediction
     label = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
     
-    with open('C:/Users/agraw/Desktop/Projects/music_genre_detection/homepage/CatBoostClassifier.pickle', 'rb') as handle:
+    with open('C:/Users/Shubh/Desktop/Projects/music_genre_detection/homepage/CatBoostClassifier.pickle', 'rb') as handle:
         model = pickle.load(handle)
 
     preds = model.predict(arr)
